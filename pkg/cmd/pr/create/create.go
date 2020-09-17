@@ -455,8 +455,8 @@ func createRun(opts *CreateOptions) error {
 		if pr != nil {
 			log.Println("test")
 			fmt.Println(opts.IO)
-			fmt.Println(opts.IO.In)
-			fmt.Println(opts.IO.Out)
+			fmt.Println(&opts.IO.In)
+			fmt.Println(&opts.IO.Out)
 			// fmt.Println(pr)
 			fmt.Fprintln(opts.IO.Out, pr.URL)
 		}

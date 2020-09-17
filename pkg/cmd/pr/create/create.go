@@ -3,6 +3,7 @@ package create
 import (
 	"errors"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -452,6 +453,7 @@ func createRun(opts *CreateOptions) error {
 
 		pr, err := api.CreatePullRequest(client, baseRepo, params)
 		if pr != nil {
+			log.Println("test")
 			fmt.Fprintln(opts.IO.Out, pr.URL)
 		}
 		if err != nil {

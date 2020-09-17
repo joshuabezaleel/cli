@@ -454,8 +454,8 @@ func createRun(opts *CreateOptions) error {
 		pr, err := api.CreatePullRequest(client, baseRepo, params)
 		if pr != nil {
 			log.Println("test")
-			fmt.Println(&opts)
-			fmt.Println(&pr)
+			fmt.Println(*opts)
+			fmt.Println(*pr)
 			fmt.Fprintln(opts.IO.Out, pr.URL)
 		}
 		if err != nil {
